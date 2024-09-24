@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/assets/images/pexels-negativespace-34090.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 60px;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.4s ease;
+}
+.glass-card:hover {
+    transform: scale(1.02);
+}
+
+.my-title {
+    font-size: 3rem; 
+    margin: 30px;
+    top: -50px;
+    color: rgba(213, 217, 223, 0.972);
+    font-weight: 500;
+}
+.my-article {
+    margin: 30px;
+    color: rgba(213, 217, 223, 0.972);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.li {
+    list-style: none;
+}
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.links li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+    left: -30px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+.links a {
+    text-decoration: none;
+    color: rgba(213, 217, 223, 0.972);
+    font-size: 1.5rem;
+}
+.links a:hover {
+    color: #0073b1;
+    
+}
+.links li:hover {
+    left: 0;
+    opacity: 1;
+}
+.links li:nth-child(1) {
+    animation: slide-in 1s forwards 1s;
+}
+.links li:nth-child(2) {
+    animation: slide-in 1s forwards 1s;
+}
+.links .fa-github {
+    color: #333;
+}
+
+.links .fa-linkedin {
+    color: #0073b1;
+}
+@keyframes slide-in {
+    from {
+        left: -30px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
